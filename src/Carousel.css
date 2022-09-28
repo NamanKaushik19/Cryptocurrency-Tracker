@@ -1,0 +1,25 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 3%;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(-225deg, #ac32e4 0%, #7918f2 48%, #4801ff 100%);
+  border-image-slice: 1;
+  background: linear-gradient(22deg, #9c00e4 0%, #391664 48%, #2a0a7b 100%);
+  background-size: 100%;
+  background-color: transparent;
+}
+.carouselItem {
+  display: flex;
+  margin-top: 4.5em;
+  margin-bottom: 2em;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}

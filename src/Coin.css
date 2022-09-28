@@ -6,11 +6,13 @@
 .coin-row {
   display: flex;
   flex-direction: row;
+  padding: 1.8em;
   justify-content: flex-start;
   align-items: center;
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
-  width: 900px;
+  border-radius: 5px;
+  width: 950px;
 }
 
 .coin {
