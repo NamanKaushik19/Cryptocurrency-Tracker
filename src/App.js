@@ -31,10 +31,8 @@ function App() {
     return coin.name.toLowerCase().includes(search.toLowerCase());
   })
 
-  return (filteredCoins.length === 0 ? (<Box sx={ { width: '100%' } }>
-    <LinearProgress style={ { backgroundColor: '#7918f2' } } />
-  </Box>)
-    : (<div className="coin-app">
+  return (
+    <div className="coin-app">
       <nav className="title">
         <img src={ logo } alt="logo" height="35em" />
         <h1>Crypto Tracker</h1>
@@ -64,20 +62,20 @@ function App() {
               />
             )
           }) }
+          <Pagination count={ Math.round((filteredCoins.length / 20)) } style={ {
+            padding: 20,
+            width: "100%",
+            display: "flex",
+            margin: "15px",
+            justifyContent: "center",
+          } }
+            onChange={ (_, value) => {
+              setPage(value);
+              window.scroll(0, 420);
+            } }
+          />
         </>) }
-      <Pagination count={ 5 } style={ {
-        padding: 20,
-        width: "100%",
-        display: "flex",
-        margin: "15px",
-        justifyContent: "center",
-      } }
-        onChange={ (_, value) => {
-          setPage(value);
-          window.scroll(0, 420);
-        } }
-      />
-    </div>)
+    </div>
   );
 }
 
