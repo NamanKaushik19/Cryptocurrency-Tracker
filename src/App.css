@@ -75,11 +75,11 @@ body {
 /* .css-1y7coo4-MuiButtonBase-root-MuiPaginationItem-root {
   color: #c85df9 !important;
 } */
-.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root {
+..css-1xr9krm {
   background-color: #7918f2 !important;
   color: white !important;
 }
-.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+..css-1xr9krmt.Mui-selected {
   background-color: #e8e0f0 !important;
   color: #7918f2 !important;
 }
