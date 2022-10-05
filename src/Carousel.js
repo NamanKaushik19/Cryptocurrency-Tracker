@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AliceCarousel from 'react-alice-carousel';
 import "./Carousel.css";
-import { Typography } from '@mui/material';
+import { CircularProgress, Typography } from '@mui/material';
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
@@ -52,17 +52,20 @@ const Carousel = () => {
     >
       Get all the Info regarding your favourate Crypto Currencies
     </Typography>
-    <AliceCarousel
-      mouseTracking
-      infinite={ true }
-      autoPlayInterval={ 1000 }
-      animationDuration={ 1500 }
-      disableDotsControls
-      responsive={ responsive }
-      autoPlay
-      disableButtonsControls
-      items={ items }
-    />
+    { trending.length === 0 ? (<CircularProgress style={ {
+      margin: "20px"
+    } } />) :
+      (<AliceCarousel
+        mouseTracking
+        infinite={ true }
+        autoPlayInterval={ 1000 }
+        animationDuration={ 1500 }
+        disableDotsControls
+        responsive={ responsive }
+        autoPlay
+        disableButtonsControls
+        items={ items }
+      />) }
   </div>
 }
 
